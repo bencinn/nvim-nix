@@ -125,6 +125,13 @@ cmp.setup.filetype('lua', {
   },
 })
 
+cmp.setup.filetype('c', {
+  sources = cmp.config.sources {
+    { name = 'nvim_lsp', keyword_length = 3 },
+    { name = 'path' },
+  },
+})
+
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
